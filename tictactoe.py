@@ -161,13 +161,13 @@ def minimax(board):
             value = min_value(result(board, action),a,b)
             if value > maxi:
                 maxi = value
-                optimal_solution = action
+                optimal_action = action
     else:
         mini = math.inf
         for action in actions(board):
             value = max_value(result(board, action),a,b)
             if value < mini:
                 mini = value
-                optimal_solution = action
+                optimal_action = action
  
-    return optimal_solution
+    return optimal_action
